@@ -9,22 +9,82 @@ navbar_title: Home
 
 {% include widgets/debug_url.html %}
 
-{% if site.data.display.homepage.show_experience %}
-    {% include widgets/experience_card.html %}
-{% endif %}
+<!-- Education & Honors & Awards -->
+<div class="row my-3">
+    <!-- Education -->
+    <div class="col-md-6 mb-3 mb-md-0">
+        <div class="p-0 bg-white shadow-sm rounded-xl h-100">
+            <h6 class="border-bottom border-gray p-3 mb-0">
+                <i class="fas fa-graduation-cap"></i> Education
+                <a href="{{ '/cv#cv-education' | relative_url }}" class="float-right">View all <i
+                        class="fas fa-angle-double-right"></i></a>
+            </h6>
+            <div class="p-3">
+                <ul class="list-unstyled mb-0">
+                    {% for item in site.data.profile.education limit:2 %}
+                    <li class="media mb-2">
+                        {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.name }}"
+                            style="width: 18px;" class="mr-1 mt-1">{% endif %}
+                        <div class="media-body">
+                            <div>{{ item.name }}</div>
+                            <div class="small d-flex">
+                                <div>{{ item.position }}</div>
+                                <div class="ml-auto no-break"><em>{{ item.date }}</em></div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 
-{% if site.data.display.homepage.show_news %}
-    {% assign count_news = site.news | size %}
-    {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-    {% endif %}
+    <!-- Honors & Awards -->
+    <div class="col-md-6">
+        <div class="p-0 bg-white shadow-sm rounded-xl h-100">
+            <h6 class="border-bottom border-gray p-3 mb-0">
+                <i class="fas fa-trophy"></i> Honors & Awards
+                <a href="{{ '/cv#cv-honors-awards' | relative_url }}" class="float-right">View all <i
+                        class="fas fa-angle-double-right"></i></a>
+            </h6>
+            <div class="p-3">
+                <ul class="list small pl-3 mb-0">
+                    {% for item in site.data.profile.awards limit:5 %}
+                    <li>
+                        <div class="d-flex">
+                            <div>{{ item.name }}</div>
+                            <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Research Focus Areas -->
+{% if site.data.profile.research_focus_areas %}
+<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
+    <h6 class="border-bottom border-gray p-3 mb-0">
+        <i class="fas fa-lightbulb"></i> Research Focus Areas
+    </h6>
+    <div class="p-3">
+        {% for item in site.data.profile.research_focus_areas %}
+        <div class="{% unless forloop.last %}mb-3{% endunless %}">
+            <h6 class="mb-1"><strong>{{ item.keyword }}</strong></h6>
+            <p class="small text-muted mb-0">{{ item.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endif %}
 
 {% if site.data.display.homepage.show_selected_publications %}
-    {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-    {% 
-        include widgets/publication_card.html 
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-    %}
+{% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
+{%
+include widgets/publication_card.html
+publications=pubs
+title='<i class="fas fa-star"></i> Selected Projects'
+%}
 {% endif %}

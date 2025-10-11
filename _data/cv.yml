@@ -1,0 +1,121 @@
+pdf_url: https://drive.google.com/file/d/1ARYqnd4txrA9ye5n7ZSqTk4Z-XHxSiQy/view?usp=sharing
+
+basics:
+  name: Deogyong Kim
+  label: AI Researcher & Undergraduate Student
+  email: legenduck@yonsei.ac.kr
+  url: https://github.com/legenduck
+  summary: >-
+    My research interests lie in Natural Language Processing (NLP), Large Language Models (LLMs), AI Agents, and Recommendation Systems, with a particular focus on capturing and personalizing human preferences. I am deeply interested in developing methods to understand and model individual user preferences across various AI applications. My goal is to create more personalized and human-centered AI systems that can better serve diverse user needs and preferences.
+
+education:
+  - institution: Yonsei University
+    logo: /assets/images/badges/yonsei.png
+    degree: B.S. in Computer Science and Engineering
+    location: Seoul, South Korea
+    date: Mar. 2021 - Present
+    summary:
+      - Originally enrolled in Earth System Sciences (Mar. 2021 - May 2024)
+      - Transferred to Computer Science and Engineering (May 2024)
+  - institution: Gyeongnam Science High School
+    degree: High School Diploma
+    location: Jinju, South Korea
+    date: Mar. 2018 - Jan. 2021
+
+work:
+  - company: Naver - AirSPACE
+    logo: /assets/images/badges/naver.png
+    position: Research Intern
+    location: Bundang-gu, Seongnam, Gyeonggi-do, South Korea
+    date: Sep. 2025 - Present
+    highlights:
+      - Developing location recommendation system
+
+experience:
+  - company: Data & Language Intelligence Lab
+    position: Undergraduate Intern
+    location: Seoul, South Korea
+    date: Jul. 2025 - Present
+    summary: >-
+      Supervisor: Prof. Dongha Lee
+    highlights:
+      - Bi-encoder based recommendation systems for efficient LLM reranking in real-time applications
+      - Human preference modeling and LLM memory mechanisms for preference learning
+  - company: Seismology & Geophysics Lab
+    position: Undergraduate Intern
+    location: Seoul, South Korea
+    date: Jan. 2022 - Jan. 2023
+    summary: >-
+      Supervisor: Prof. Taekyung Hong
+    highlights:
+      - Analysis of microseism characteristics in the Korean Peninsula and their application to orientation calibration of borehole seismometers
+      - Hypocenter determination of microearthquakes in the East Sea
+
+honors_awards:
+  - name: Academic Excellence Award, Department of Computer Science and Engineering, Spring 2025
+    date: 2025
+  - name: Grand Award (IITP Director's Award), 2025 SW-Centric University Digital Competition
+    org: Task - Real-time Walking Assistance Framework Development for the Visually Impaired
+    date: 2025
+  - name: Excellence Award, 2024 Yonsei University Health System Bigdata Challenge
+    org: Task - Heart Failure Probability Prediction Model Using ECG Waveforms and CDM Data
+    date: 2024
+  - name: Academic Excellence Award, Department of Earth System Sciences, Fall 2023
+    date: 2023
+  - name: Academic Excellence Award, Department of Earth System Sciences, Spring 2023
+    date: 2023
+  - name: Scholarship for Academic Excellence, Department of Earth System Sciences
+    date: 2023
+  - name: Service Scholarship, Department of Earth System Sciences
+    org: Vice President, Student Council
+    date: 2022
+  - name: Academic Excellence Award, Department of Earth System Sciences, Fall 2021
+    date: 2021
+  - name: Academic Excellence Award, Department of Earth System Sciences, Spring 2021
+    date: 2021
+  - name: Scholarship for Academic Excellence, Department of Earth System Sciences
+    date: 2021
+
+extracurricular:
+  - name: YAI (Yonsei Artificial Intelligence) Academic Club
+    logo: /assets/images/badges/YAI.png
+    org: Core Member & President at First Half of 2025
+    date: Jan. 2024 - Present
+    summary: >-
+      Engaged in paper reading sessions with club members to explore research interests in artificial intelligence. Built foundational knowledge in AI and developed research capabilities through collaborative academic activities. Served as president during Spring 2025 semester, leading club operations.
+
+teaching:
+  - course: Computer Algorithms for AI Applications (AIC2130)
+    role: Tutor
+    date: Sep. 2024 - Dec. 2024
+    summary: >-
+      Tutored students in Computer Algorithms for AI Applications Course.
+  - course: AI Programming with Python (AIC2100)
+    role: Tutor
+    date: Mar. 2024 - Jun. 2024
+    summary: >-
+      Tutored students in AI Programming with Python Course.
+
+selected_projects:
+  - title: Reasoning in Offline - Towards Efficient LLM Reranking for Real-Time Recommendation
+    date: Jul. 2025 - Present
+    summary: >-
+      Co-First Author. Implemented a bi-encoder recommendation pipeline for real-time reranking using offline LLM reasoning. Engineered efficient candidate retrieval and similarity matching to enable sub-second inference for large item sets.
+    tags: [NLP, LLM, Recommendation Systems]
+  - title: A-EYE - Real-time Walking Assistance Framework for the Visually Impaired
+    date: Jul. 2025 - Aug. 2025
+    summary: >-
+      Team Leader. Led a 3-member team to develop a real-time visual assistance system using Gemini API. Engineered a 1-second capture-to-TTS pipeline and integrated depth estimation for emergency obstacle detection.
+    tags: [Computer Vision, Gemini API, Accessibility]
+
+skills:
+  - name: Programming
+    items: [Python, JAVA, C/C++, MATLAB]
+  - name: DevOps
+    items: [Docker, Linux]
+  - name: Database
+    items: [PostgreSQL]
+  - name: Design & Media
+    items: [Photoshop, Premiere Pro]
+  - name: Languages
+    items: [Korean (Native), English, Japanese (Aural Comprehension)]

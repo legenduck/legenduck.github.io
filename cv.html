@@ -1,0 +1,334 @@
+---
+layout: default
+title : CV
+navbar_title: CV
+permalink: /cv
+body_attr: 'data-spy="scroll" data-target="#cv-nav" data-offset="150"'
+---
+
+{% assign cv = site.data.cv %}
+
+<div class="cv-page-container">
+    <div class="row">
+        <div class="col-12 col-lg-10">
+            <!-- Basics -->
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-basics">
+                <div class="d-flex align-items-center border-bottom border-gray p-3 mb-0">
+                    <h5 class="mb-0">Basics</h5>
+                    {% if cv.pdf_url %}
+                    <a class="ml-auto btn btn-sm btn-outline-danger" target="_blank" href="{{ cv.pdf_url }}"
+                        title="Open PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    {% elsif site.data.profile.cv_link %}
+                    <a class="ml-auto btn btn-sm btn-outline-danger" target="_blank"
+                        href="{{ site.data.profile.cv_link | relative_url }}" title="Open PDF">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="p-3">
+                    <div class="mb-1"><strong class="mr-3">Name</strong>{{ cv.basics.name | default:
+                        site.data.profile.primary_name }}</div>
+                    {% if cv.basics.label %}<div class="mb-1"><strong class="mr-3">Label</strong>{{ cv.basics.label }}
+                    </div>{% endif %}
+                    {% if cv.basics.email %}
+                    <div class="mb-1"><strong class="mr-3">Email</strong><a
+                            href="mailto:{{ cv.basics.email | encode_email }}">{{ cv.basics.email
+                            |
+                            replace: "@", "(at)" }}</a></div>
+                    {% else %}
+                    <div class="mb-1"><strong class="mr-3">Email</strong><a
+                            href="mailto:{{ site.data.profile.email | encode_email }}">{{
+                            site.data.profile.email | replace: "@", "(at)" }}</a></div>
+                    {% endif %}
+                    {% if cv.basics.phone %}<div class="mb-1"><strong class="mr-3">Phone</strong>{{ cv.basics.phone }}
+                    </div>{% endif %}
+                    {% if cv.basics.url %}<div class="mb-1"><strong class="mr-3">Url</strong><a target="_blank"
+                            href="{{ cv.basics.url }}">{{
+                            cv.basics.url }}</a></div>{% endif %}
+                    {% if cv.basics.summary %}<div class="mt-3 text-muted">{{ cv.basics.summary }}</div>{% endif %}
+                </div>
+            </div>
+
+            <!-- Education -->
+            {% if cv.education %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-education">
+                <h5 class="border-bottom border-gray p-3 mb-0">Education</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.education %}
+                        <li class="media mb-3">
+                            {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.institution }}"
+                                style="width: 18px;" class="mr-2 mt-1">{% endif %}
+                            <div class="media-body">
+                                <div class="d-flex">
+                                    <div><strong>{{ item.institution }}</strong></div>
+                                    <div class="ml-auto text-right">
+                                        <div class="no-break"><em>{{ item.date }}</em></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="small">{{ item.degree }}</div>
+                                    {% if item.location %}
+                                    <div class="ml-auto text-right">
+                                        <div class="small text-muted no-break">{{ item.location }}</div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% if item.summary %}
+                                {% if item.summary.first %}
+                                <ul class="small text-muted mb-0 mt-1">
+                                    {% for line in item.summary %}
+                                    <li>{{ line }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                                <div class="small text-muted mt-1">{{ item.summary }}</div>
+                                {% endif %}
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Experience -->
+            {% if cv.experience %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-experience">
+                <h5 class="border-bottom border-gray p-3 mb-0">Experience</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.experience %}
+                        <li class="media mb-2">
+                            {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.company }}"
+                                style="width: 18px;" class="mr-2 mt-1">{% endif %}
+                            <div class="media-body">
+                                <div class="d-flex">
+                                    <div><strong>{{ item.company }}</strong></div>
+                                    <div class="ml-auto text-right">
+                                        <div class="no-break"><em>{{ item.date }}</em></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="small">
+                                        {{ item.position }}{% if item.summary %} (<strong>{{ item.summary }}</strong>){%
+                                        endif %}
+                                    </div>
+                                    {% if item.location %}
+                                    <div class="ml-auto text-right">
+                                        <div class="small text-muted no-break">{{ item.location }}</div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% if item.highlights %}
+                                <ul class="small mb-1 mt-1">
+                                    {% for h in item.highlights %}
+                                    <li>{{ h }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Work -->
+            {% if cv.work %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-work">
+                <h5 class="border-bottom border-gray p-3 mb-0">Work</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.work %}
+                        <li class="media mb-2">
+                            {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.company }}"
+                                style="width: 18px;" class="mr-2 mt-1">{% endif %}
+                            <div class="media-body">
+                                <div class="d-flex">
+                                    <div><strong>{{ item.company }}</strong></div>
+                                    <div class="ml-auto text-right">
+                                        <div class="no-break"><em>{{ item.date }}</em></div>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="small">
+                                        {{ item.position }}{% if item.summary %} (<strong>{{ item.summary }}</strong>){%
+                                        endif %}
+                                    </div>
+                                    {% if item.location %}
+                                    <div class="ml-auto text-right">
+                                        <div class="small text-muted no-break">{{ item.location }}</div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                                {% if item.highlights %}
+                                <ul class="small mb-1 mt-1">
+                                    {% for h in item.highlights %}
+                                    <li>{{ h }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Honors & Awards -->
+            {% if cv.honors_awards %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-honors-awards">
+                <h5 class="border-bottom border-gray p-3 mb-0">Honors & Awards</h5>
+                <div class="p-3">
+                    <h6 class="font-weight-bold mt-2 mb-2">Honors</h6>
+                    <ul class="list small pl-3 mb-3">
+                        {% for item in cv.honors_awards %}
+                        {% if item.name contains 'Scholarship' or item.org contains 'Scholarship' %}
+                        <li>
+                            <div class="d-flex">
+                                <div>{{ item.name }}</div>
+                                <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                            </div>
+                            {% if item.org %}<div class="small text-muted">{{ item.org }}</div>{% endif %}
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+
+                    <h6 class="font-weight-bold mt-2 mb-2">Awards</h6>
+                    <ul class="list small pl-3 mb-0">
+                        {% for item in cv.honors_awards %}
+                        {% if item.name contains 'Award' %}
+                        <li>
+                            <div class="d-flex">
+                                <div>{{ item.name }}</div>
+                                <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                            </div>
+                            {% if item.org %}<div class="small text-muted">{{ item.org }}</div>{% endif %}
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Extracurricular Activity -->
+            {% if cv.extracurricular %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-extracurricular">
+                <h5 class="border-bottom border-gray p-3 mb-0">Extracurricular Activity</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.extracurricular %}
+                        <li class="media mb-2">
+                            {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.name }}"
+                                style="width: 18px;" class="mr-2 mt-1">{% endif %}
+                            <div class="media-body">
+                                <div class="d-flex">
+                                    <div>{{ item.name }}</div>
+                                    <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                                </div>
+                                {% if item.org %}<div class="small text-muted">{{ item.org }}</div>{% endif %}
+                                {% if item.summary %}<div class="small">{{ item.summary }}</div>{% endif %}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Teaching -->
+            {% if cv.teaching %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-teaching">
+                <h5 class="border-bottom border-gray p-3 mb-0">Teaching</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.teaching %}
+                        <li class="mb-2">
+                            <div class="d-flex">
+                                <div><strong>{{ item.course }}</strong>{% if item.role %} — {{ item.role }}{% endif %}
+                                </div>
+                                <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
+                            </div>
+                            {% if item.institution %}<div class="small text-muted">{{ item.institution }}</div>{% endif
+                            %}
+                            {% if item.summary %}<div class="small">{{ item.summary }}</div>{% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Selected Projects -->
+            {% if cv.selected_projects %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-selected-projects">
+                <h5 class="border-bottom border-gray p-3 mb-0">Selected Projects</h5>
+                <div class="p-3">
+                    <ul class="list-unstyled mb-0">
+                        {% for item in cv.selected_projects %}
+                        <li class="mb-2">
+                            <div class="d-flex">
+                                <div>
+                                    {% if item.url %}<a target="_blank" href="{{ item.url }}">{{ item.title }}</a>{%
+                                    else
+                                    %}{{ item.title }}{% endif %}
+                                </div>
+                                {% if item.date %}<div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>{%
+                                endif %}
+                            </div>
+                            {% if item.summary %}<div class="small">{{ item.summary }}</div>{% endif %}
+                            {% if item.tags %}
+                            <div class="small text-muted">{{ item.tags | join: ', ' }}</div>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Skills -->
+            {% if cv.skills %}
+            <div class="my-4 p-0 bg-white shadow-sm rounded-xl cv-section" id="cv-skills">
+                <h5 class="border-bottom border-gray p-3 mb-0">Skills</h5>
+                <div class="p-3">
+                    <div class="row">
+                        {% for group in cv.skills %}
+                        <div class="col-md-6">
+                            <div class="mx-1 my-1">
+                                <div class="font-weight-bold">{{ group.name }}</div>
+                                <div class="small text-muted">{{ group.items | join: ', ' }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+
+        <div class="col-2 d-none d-lg-block">
+            <div id="cv-nav" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+                <a class="nav-link d-block" href="#cv-basics">Basics</a>
+                <a class="nav-link d-block" href="#cv-education">Education</a>
+                <a class="nav-link d-block" href="#cv-experience">Experience</a>
+                <a class="nav-link d-block" href="#cv-work">Work</a>
+                <a class="nav-link d-block" href="#cv-honors-awards">Honors &amp; Awards</a>
+                <a class="nav-link d-block" href="#cv-extracurricular">Extracurricular Activity</a>
+                <a class="nav-link d-block" href="#cv-teaching">Teaching</a>
+                <a class="nav-link d-block" href="#cv-selected-projects">Selected Projects</a>
+                <a class="nav-link d-block" href="#cv-skills">Skills</a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,25 +1,36 @@
 @charset "utf-8";
+
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     font-weight: 700;
 }
 
 .card {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
 }
 
 .card-img-overlay {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
 }
 
 .rounded-xl {
-    border-radius: 0.8rem!important;
+    border-radius: 0.8rem !important;
 }
 
 .rounded-xl-bottom {
@@ -90,3 +101,12 @@ div.lazy {
     font-family: Courier, monospace;
 }
 
+/* CV section: prevent navbar from covering section headers when scrolling */
+.cv-section {
+    scroll-margin-top: 100px;
+}
+
+/* CV page: add bottom padding so last sections can scroll to top */
+.cv-page-container {
+    padding-bottom: 60vh;
+}
