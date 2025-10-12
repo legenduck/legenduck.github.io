@@ -7,6 +7,6 @@
                 class="fas fa-angle-double-right"></i></a>
     </h6>
     {% for item in publications limit:include.limit %}
-    {% include widgets/publication_item.html item=item first=false last=false %}
+    {% include widgets/publication_item.html item=item first=false last=false use_summary=true %}
     {% endfor %}
 </div>

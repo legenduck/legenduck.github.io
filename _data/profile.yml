@@ -62,3 +62,15 @@ research_focus_areas:
   description: "Developing methods to capture, model, and align large language models with individual human preferences, focusing on how LLMs can better understand and adapt to unique user needs and contexts."
 - keyword: "Efficient Recommendation & Information Retrieval Systems"
   description: "Creating real-time recommendation and retrieval systems that leverage user understanding to deliver personalized, contextually relevant information at scale."
+
+work:
+- company: Naver - AirSPACE
+  logo: /assets/images/badges/naver.png
+  position: Research Intern
+  date: Sep. 2025 - Present
+
+extracurricular:
+- name: YAI (Yonsei Artificial Intelligence) Academic Club
+  logo: /assets/images/badges/YAI.png
+  org: Core Member & President at First Half of 2025
+  date: Jan. 2024 - Present
