@@ -231,7 +231,8 @@ body_attr: 'data-spy="scroll" data-target="#cv-nav" data-offset="150"'
                                 style="width: 18px;" class="mr-2 mt-1">{% endif %}
                             <div class="media-body">
                                 <div class="d-flex">
-                                    <div>{{ item.name }}</div>
+                                    <div>{% if item.url %}<a href="{{ item.url }}" target="_blank">{{ item.name }}</a>{%
+                                        else %}{{ item.name }}{% endif %}</div>
                                     <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
                                 </div>
                                 {% if item.org %}<div class="small text-muted">{{ item.org }}</div>{% endif %}

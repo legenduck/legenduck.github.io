@@ -125,7 +125,8 @@ navbar_title: Home
                         {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="{{ item.name }}"
                             style="width: 18px;" class="mr-1 mt-1">{% endif %}
                         <div class="media-body">
-                            <div><strong>{{ item.name }}</strong></div>
+                            <div><strong>{% if item.url %}<a href="{{ item.url }}" target="_blank">{{ item.name }}</a>{%
+                                    else %}{{ item.name }}{% endif %}</strong></div>
                             {% if item.org %}<div class="small text-muted d-flex">
                                 <div>{{ item.org }}</div>
                                 <div class="ml-auto no-break"><em>{{ item.date }}</em></div>
