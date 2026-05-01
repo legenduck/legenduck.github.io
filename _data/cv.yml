@@ -120,7 +120,9 @@ teaching:
 
 skills:
   - name: Programming
-    items: [Python, JAVA, C/C++, MATLAB]
+    items: [Python, JAVA, C/C++, MATLAB, TypeScript]
+  - name: Frameworks & Libraries
+    items: [PyTorch, React, FastAPI]
   - name: DevOps
     items: [Docker, Linux]
   - name: Database
