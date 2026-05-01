@@ -4,7 +4,7 @@ navbar_name: "Deogyong Kim"
 
 positions:
 - logo: /assets/images/badges/yonsei.png
-  name: Undergraduate Intern at DLI Lab
+  name: M.S. Student at DLI Lab
 
 
 email: "legenduck@yonsei.ac.kr"
@@ -21,7 +21,7 @@ github: legenduck
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    Hi! My name is Deogyong Kim, an undergraduate student in Computer Science and Engineering at Yonsei University. I am currently an undergraduate research intern at the <a href="https://diyonsei.notion.site/" target="_blank">Data & Language Intelligence Lab</a>, advised by <a href="https://donalee.github.io/" target="_blank">Prof. Dongha Lee</a>.
+    Hi! My name is Deogyong Kim, a Master's student in Computer Science and Engineering at Yonsei University. I am a graduate researcher at the <a href="https://dli.yonsei.ac.kr/" target="_blank">Data & Language Intelligence Lab</a>, advised by <a href="https://donalee.github.io/" target="_blank">Prof. Dongha Lee</a>.
   </p>
   <p>
     My research interests lie in Natural Language Processing (NLP), Large Language Models (LLMs), and AI Agents, with a particular focus on personalization for individual users. I am passionate about developing human-centered AI systems that can better understand and adapt to diverse user needs and preferences.
