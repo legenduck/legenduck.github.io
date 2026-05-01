@@ -326,7 +326,9 @@ body_attr: 'data-spy="scroll" data-target="#cv-nav" data-offset="150"'
                 <a class="nav-link d-block" href="#cv-honors-awards">Honors &amp; Awards</a>
                 <a class="nav-link d-block" href="#cv-extracurricular">Extracurricular Activity</a>
                 <a class="nav-link d-block" href="#cv-teaching">Teaching</a>
+                {% if cv.selected_projects %}
                 <a class="nav-link d-block" href="#cv-selected-projects">Selected Projects</a>
+                {% endif %}
                 <a class="nav-link d-block" href="#cv-skills">Skills</a>
             </div>
         </div>

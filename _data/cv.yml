@@ -2,7 +2,7 @@ pdf_url: https://drive.google.com/file/d/1ARYqnd4txrA9ye5n7ZSqTk4Z-XHxSiQy/view?
 
 basics:
   name: Deogyong Kim
-  label: AI Researcher & Undergraduate Student
+  label: AI Researcher & M.S. Student
   email: legenduck@yonsei.ac.kr
   url: https://github.com/legenduck
   summary: >-
@@ -11,9 +11,16 @@ basics:
 education:
   - institution: Yonsei University
     logo: /assets/images/badges/yonsei.png
-    degree: B.S. in Computer Science and Engineering
+    degree: M.S. in Intelligence Convergence
     location: Seoul, South Korea
-    date: Mar. 2021 - Present
+    date: Mar. 2026 - Present
+    summary:
+      - Advised by Prof. Dongha Lee
+  - institution: Yonsei University
+    logo: /assets/images/badges/yonsei.png
+    degree: B.S. in Computer Science and Engineering (GPA 3.88/4.0)
+    location: Seoul, South Korea
+    date: Mar. 2021 - Feb. 2026
     summary:
       - Originally enrolled in Earth System Sciences (Mar. 2021 - May 2024)
       - Transferred to Computer Science and Engineering (May 2024)
@@ -98,17 +105,18 @@ teaching:
     summary: >-
       Tutored students in AI Programming with Python Course.
 
-selected_projects:
-  - title: Reasoning in Offline - Towards Efficient LLM Reranking for Real-Time Recommendation
-    date: Jul. 2025 - Present
-    summary: >-
-      Co-First Author. Implemented a bi-encoder recommendation pipeline for real-time reranking using offline LLM reasoning. Engineered efficient candidate retrieval and similarity matching to enable sub-second inference for large item sets.
-    tags: [NLP, LLM, Recommendation Systems]
-  - title: A-EYE - Real-time Walking Assistance Framework for the Visually Impaired
-    date: Jul. 2025 - Aug. 2025
-    summary: >-
-      Team Leader. Led a 3-member team to develop a real-time visual assistance system using Gemini API. Engineered a 1-second capture-to-TTS pipeline and integrated depth estimation for emergency obstacle detection.
-    tags: [Computer Vision, Gemini API, Accessibility]
+# selected_projects: hidden for now
+# selected_projects:
+#   - title: Reasoning in Offline - Towards Efficient LLM Reranking for Real-Time Recommendation
+#     date: Jul. 2025 - Present
+#     summary: >-
+#       Co-First Author. Implemented a bi-encoder recommendation pipeline for real-time reranking using offline LLM reasoning. Engineered efficient candidate retrieval and similarity matching to enable sub-second inference for large item sets.
+#     tags: [NLP, LLM, Recommendation Systems]
+#   - title: A-EYE - Real-time Walking Assistance Framework for the Visually Impaired
+#     date: Jul. 2025 - Aug. 2025
+#     summary: >-
+#       Team Leader. Led a 3-member team to develop a real-time visual assistance system using Gemini API. Engineered a 1-second capture-to-TTS pipeline and integrated depth estimation for emergency obstacle detection.
+#     tags: [Computer Vision, Gemini API, Accessibility]
 
 skills:
   - name: Programming
