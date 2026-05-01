@@ -34,8 +34,12 @@ portrait_caption: >-
 education:
 - name: Yonsei University
   logo: /assets/images/badges/yonsei.png
-  position: B.S. in Computer Science and Engineering
-  date: Mar. 2021 - Present
+  position: M.S. in Computer Science and Engineering
+  date: Mar. 2026 - Present
+- name: Yonsei University
+  logo: /assets/images/badges/yonsei.png
+  position: B.S. in Computer Science and Engineering (GPA 3.88/4.0)
+  date: Mar. 2021 - Feb. 2026
 
 # experience:
 # - name: Peking University
